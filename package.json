@@ -1,0 +1,27 @@
+{
+  "name": "swanson-quotes-server",
+  "version": "1.0.0",
+  "description": "API for getting random Ron Swanson quotes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "test": "mocha --exit"
+  },
+  "keywords": [
+    "ron",
+    "swanson",
+    "quotes",
+    "parks",
+    "recreation"
+  ],
+  "author": "Codey Worley",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "mongoose": "^5.0.6",
+    "cors": "^2.8.4"
+  }
+}
