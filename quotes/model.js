@@ -2,15 +2,15 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const QuoteSchema = new mongoose.Schema({
-    rating: {
-        type: Number,
-        default: 0
-    },
     content: {
         type: String,
         required: true
     },
-    scores: {
+    ratings: {
+        type: Array,
+        default: []
+    },
+    addresses: {
         type: Array,
         default: []
     }
