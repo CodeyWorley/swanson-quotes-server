@@ -52,13 +52,13 @@ router.put('/:id', (req, res) => {
   const {rating, address} = req.body;
 
   return Quote.find({_id: id, addresses: address})
-    .countDocuments()
+    .count()
     .then(count => {
       if(count > 0) {
         return Promise.reject({
           code: 422,
           reason: 'ValidationError',
-          message: 'You have alreadt voted on this quote',
+          message: 'This address has already voted on this quote',
           location: 'quote'
         });
       }
